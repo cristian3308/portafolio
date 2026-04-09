@@ -4,6 +4,7 @@ import './globals.css'
 import ThemeProvider from '../components/ThemeProvider'
 import { LanguageProvider } from '../components/LanguageProvider'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' })
@@ -31,6 +32,7 @@ export default function RootLayout({
                     <LanguageProvider>
                         {children}
                         <SpeedInsights />
+                        <Analytics />
                     </LanguageProvider>
                 </ThemeProvider>
             </body>
