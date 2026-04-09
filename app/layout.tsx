@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import ThemeProvider from '../components/ThemeProvider'
 import { LanguageProvider } from '../components/LanguageProvider'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' })
@@ -29,6 +30,7 @@ export default function RootLayout({
                 <ThemeProvider>
                     <LanguageProvider>
                         {children}
+                        <SpeedInsights />
                     </LanguageProvider>
                 </ThemeProvider>
             </body>
